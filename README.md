@@ -1,16 +1,62 @@
-# React + Vite
+# OMX Reference
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Interactive reference guide to all **33 Agent Prompts** and **36 Workflow Skills** in [oh-my-codex](https://github.com/chriscarrollsmith/oh-my-codex) (OMX).
 
-Currently, two official plugins are available:
+Built with **React + Vite + Lucide Icons**, bundled into a single portable HTML file.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What Is This?
 
-## React Compiler
+[oh-my-codex](https://github.com/chriscarrollsmith/oh-my-codex) is a multi-agent orchestration layer for Codex CLI. It ships with **33 specialized agent prompts** (analyst, architect, executor, debugger, etc.) and **36 workflow skills** (autopilot, ralph, team, tdd, etc.).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This app consolidates all of them into a single searchable, filterable, interactive reference so you can quickly find the right prompt or skill for any task.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Feature | Description |
+|---------|-------------|
+| **Full-text Search** | Search across names, descriptions, purposes, aliases, and usage guides |
+| **Type Filter** | Toggle between All / Prompts / Skills |
+| **9 Category Filters** | Planning, Review, Execution, Testing, Research, Product, Workflow, Utility, Git |
+| **Expandable Cards** | Click any card to see purpose, mode, when to use, and use cases |
+| **Lucide SVG Icons** | Proper vector icons for every category, prompt, and skill |
+| **Single HTML Build** | Portable `dist/index.html` — works offline in any browser |
+
+## Categories
+
+| Category | Prompts | Skills |
+|----------|---------|--------|
+| Planning & Analysis | analyst, architect, critic, planner | analyze, deep-interview, plan, ralplan |
+| Code Review & Quality | api-reviewer, code-reviewer, performance-reviewer, quality-reviewer, security-reviewer, style-reviewer | code-review, review, security-review |
+| Execution & Implementation | build-fixer, code-simplifier, debugger, designer, executor, sisyphus-lite | ai-slop-cleaner, build-fix, frontend-ui-ux, web-clone |
+| Testing & Verification | qa-tester, quality-strategist, test-engineer, verifier | tdd, ultraqa, visual-verdict |
+| Research & Documentation | dependency-expert, explore, researcher, writer | deepsearch |
+| Product & UX | information-architect, product-analyst, product-manager, ux-researcher | — |
+| Workflow & Orchestration | team-executor, team-orchestrator | autopilot, pipeline, ralph, ralph-init, swarm, team, ultrawork, worker |
+| Utility & Configuration | explore-harness, vision | ask-claude, ask-gemini, cancel, configure-notifications, doctor, ecomode, help, hud, note, omx-setup, skill, trace |
+| Git & Version Control | git-master | git-master |
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Dev server
+npm run dev
+# → http://localhost:5173
+
+# Build single HTML file
+npm run build
+# → dist/index.html (246 KB)
+```
+
+## Tech Stack
+
+- **React** — UI components
+- **Vite** — Build tooling
+- **Lucide React** — SVG icon library
+- **vite-plugin-singlefile** — Bundles everything into one HTML file
+
+## License
+
+MIT
